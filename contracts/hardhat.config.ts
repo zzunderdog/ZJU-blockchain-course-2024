@@ -9,9 +9,9 @@ const config: HardhatUserConfig = {
       url: 'http://localhost:8545',
       // the private key of signers, change it according to your ganache user
       accounts: [
-        '0x268b6ae322cfce2cd5dd5eb26ae4810b6692847724fc8b241ed2a21db6887de1',
-        '0x09ec9925ba8fb14224596916820fa46611ed6aad0a56cfdd7621f890dfa724ad',
-        '0x93b982aed6810eef873a1862eb85419b5f2928c84ea9a057999592450861dfe7'
+        '0x09e791fea198bcecb63b78651cfc2f5c2c620a36a4694f8c788a3fc3c97b5eef',
+        '0xf85ae2c95640ededbb25a729aea45459a60e3ee720e07195f0ee83003d6fbb63',
+        '0xb9262c325e54e96e99de59d958d92c865a541acbe5c65a652c00b511d5fc5d0b'
       ]
     },
   },

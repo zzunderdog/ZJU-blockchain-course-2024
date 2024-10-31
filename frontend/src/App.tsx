@@ -1339,8 +1339,8 @@ const TokenABI = [
   }
 ];
 
-const BUY_MY_ROOM_CONTRACT_ADDRESS = '0x2109715f0D28b462ed488a417b3b79E53f5A9b1c'; // 替换为实际地址
-const TOKEN_CONTRACT_ADDRESS = '0xEF78630770326892AAb53CD3f50F4C0A4eF7bEb2'; // 替换为实际地址
+const BUY_MY_ROOM_CONTRACT_ADDRESS = '0x5323B950ED150e8013d6D861aACB454d02D7Fe69'; // 替换为实际地址
+const TOKEN_CONTRACT_ADDRESS = '0xbfD84DB4D21Bbe4Ae0a4b6341F7629EC964739e8'; // 替换为实际地址
 
 function App() {
   const [account, setAccount] = useState<string | null>(null);
