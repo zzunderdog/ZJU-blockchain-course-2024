@@ -301,111 +301,84 @@
 
 1. 项目启动时ganache状态如下：
 
-   <img src="source/微信截图_20241031204149.png" alt="微信截图_20241031204149" style="zoom:60%;" />
+   <img src="source/微信截图_20241031204149.png" alt="微信截图_20241031204149" style="zoom: 67%;" />
 
    本次实验我们使用前三个账号进行测试，其中第一个账号为部署者。由于先前已经进行过很多次测试了，所以账户状态并不是创建时的初始状态。
 
 2. 登录meta mask钱包，并绑定账户，进入`localhost:3000`页面，即可看到这个界面（当前为部署者）
 
-   <img src="D:\Data\ETH\ZJU-blockchain-course-2024\source\微信截图_20241031205046.png" alt="微信截图_20241031205046" style="zoom:60%;" />
+   <img src="source/微信截图_20241031205046.png" alt="微信截图_20241031205046" style="zoom: 67%;" />
 
    
 
 3. 铸造房屋。
 
-   <img src="pics/image-5.png" alt="image-20241026134212832" style="zoom:67%;" />
+   <img src="source/微信截图_20241031205808.png" alt="微信截图_20241031205808" style="zoom:67%;" />我们成功领取了一套房子，ID为6.
 
-   我们成功领取了一套房子，ID为1.
+   <img src="source/微信截图_20241031205947.png" alt="微信截图_20241031205947" style="zoom:67%;" />
 
-   <img src="pics/image-6.png" alt="image-20241026134253842" style="zoom:67%;" />
+   部署者也可以为他人铸造房屋，可以铸造一些以便演示其他功能
 
-   <img src="pics/image-7.png" alt="image-20241026134305345" style="zoom:67%;" />
-
-   此时ganache中也多了一笔交易和一个区块。
-
-   每个用户最多可以领取五套房子，之后再要领取的话就会报错，如下图所示：
-
-   <img src="pics/image-8.png" alt="image-20241026134407725" style="zoom:67%;" />
+   <img src="source/微信截图_20241031210510.png" alt="微信截图_20241031210510" style="zoom:67%;" />
 
 4. 上架/下架房屋：
 
-   我们以5ERC20代币的价格上架ID为2的房屋：
+   我们以2ETH的价格上架ID为6的房屋：
 
-   <img src="pics/image-9.png" alt="image-20241026134542340" style="zoom:67%;" />
+   <img src="source/微信截图_20241031210722.png" alt="微信截图_20241031210722" style="zoom:67%;" />
 
-   此时ganache中多出了相关的交易和区块：
-
-   <img src="pics/image-10.png" alt="image-20241026134728525" style="zoom: 67%;" />
-
-   <img src="pics/image-11.png" alt="image-20241026134759841" style="zoom:67%;" />
-
-   从这个列表中也能看出，前面6个区块是成功领取5套房子的5个区块和领取失败的一个区块。
+   
 
 5. 下架房屋：
 
-   <img src="pics/image-12.png" alt="image-20241026135052075" style="zoom:67%;" />
+   <img src="source/微信截图_20241031210808.png" alt="微信截图_20241031210808" style="zoom:67%;" />
 
-   仍使用当前用户下架房屋，是可以下架成功的。
+   
 
-   此时ganache中也对应地多了一个transaction和一个区块。
+   再次以3ETH的价格上架ID为2的房屋
 
-   <img src="pics/image-15.png" alt="image-20241026135239566" style="zoom:67%;" />
+   <img src="source/微信截图_20241031211023.png" alt="微信截图_20241031211023" style="zoom:67%;" />
 
-   <img src="pics/image-14.png" alt="image-20241026135249803" style="zoom:67%;" />
+6. 铸造和ERC20代币
 
-   再次以5 ERC20代币的价格上架ID为2的房屋，然后切换到另一个账户尝试下架房屋，会发现不行：
+   铸造：
 
-   <img src="pics/image-16.png" alt="image-20241026135355377" style="zoom: 67%;" />
+   <img src="source/微信截图_20241031211223.png" alt="微信截图_20241031211223" style="zoom:67%;" />
 
-6. 兑换ERC20代币
+   授权后代币才能被普通用户兑换或购买房屋：
 
-   兑换前的状态：
+   <img src="source/微信截图_20241031211252.png" alt="微信截图_20241031211252" style="zoom:67%;" />
 
-   <img src="pics/image-17.png" alt="image-20241026140013441" style="zoom:67%;" />
+   切换到普通用户兑换：
 
-   兑换10个ERC代币：
+   <img src="source/微信截图_20241031211532.png" alt="微信截图_20241031211532" style="zoom:67%;" />
 
-   <img src="pics/image-18.png" alt="image-20241026140042765" style="zoom:67%;" />
-
-   <img src="pics/image-19.png" alt="image-20241026140100249" style="zoom:67%;" />
-
-   正如前面的内容提到的，我们设置的兑换比例是1：1，所以兑换得到了10个ERC代币，相应地ETH就少了10.
-
-   ganache中也增加了对应的交易信息：
-
-   <img src="pics/image-20.png" alt="image-20241026140223216" style="zoom:67%;" />
+   <img src="source/微信截图_20241031211514.png" alt="微信截图_20241031211514" style="zoom:67%;" />
 
 7. 购买房产
 
-   <img src="pics/image-21.png" alt="image-20241026140313143" style="zoom:67%;" />
-
    首先查看在售的房屋信息，可以看到房屋主人、价格、上架时间三条信息。
 
-   接着点击购买，我们可以自定义设置支出上限
+   <img src="source/微信截图_20241031211731.png" alt="微信截图_20241031211731" style="zoom:67%;" />
 
-   <img src="pics/image-22.png" alt="image-20241026140414885" style="zoom:67%;" />
+   接着设置支出上限（也就是授权）
+
+   <img src="source/微信截图_20241031212301.png" alt="微信截图_20241031212301" style="zoom:67%;" />
 
    然后下一步，就可以购买房屋了：
 
-   <img src="pics/image-23.png" alt="image-20241026140503057" style="zoom:67%;" />
+   这里选择用token购买，会自动根据贷币兑换汇率来计算花费的token数量
 
-   购买成功，房子现在是用户`0xA65E478ba75FA78950Ec18D0eE215D45dB659a93`的了。相应地，可以看到用户`0xA65E478ba75FA78950Ec18D0eE215D45dB659a93`的ERC代币余额变成了5.
+   <img src="source/微信截图_20241031212348.png" alt="微信截图_20241031212348" style="zoom:67%;" />
 
-   然后我们再切换回去售出方的账户查看：
+   购买成功
 
-   <img src="pics/image-24.png" alt="image-20241026140728804" style="zoom:67%;" />
+   <img src="source/微信截图_20241031212535.png" alt="微信截图_20241031212535" style="zoom:67%;" />
 
-   可以看到，用户`0xc44aea6b76e591fc8716044e3cbfb027387aa046`的房产就少了ID为2的房屋，且其ERC20代币余额增加了5（原先是0）.
+   **另外还有用eth购买，设置手续费比例和兑换比例的展示，防止`readme`过于冗长展示在视频中**
 
-   ganache中也可以看到相关交易信息：
+   以上截图可能无法完全展示本交易系统的所有功能。您可以查看`source`中的视频
 
-   <img src="pics/image-25.png" alt="image-20241026140849611" style="zoom:67%;" />
-
-   以上截图可能无法完全展示本交易系统的所有功能。您可以查看以下视频：
-
-   <video src="演示视频.mp4"></video>
-
-## 参考内容
 
 - 课程的参考Demo见：[DEMOs](https://github.com/LBruyne/blockchain-course-demos)。
 

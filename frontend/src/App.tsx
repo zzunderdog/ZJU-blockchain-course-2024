@@ -1652,7 +1652,8 @@ function App() {
                                   {property.isForSale ? (
                                       <button onClick={() => delistHouse(property.tokenId)}>取消挂单</button>
                                   ) : (
-                                      <button onClick={() => setDialogVisible(`list-${property.tokenId}`)}>挂单出售</button>
+                                      <button
+                                          onClick={() => setDialogVisible(`list-${property.tokenId}`)}>挂单出售</button>
                                   )}
                                 </div>
                             ))
@@ -1681,6 +1682,17 @@ function App() {
                         )}
                       </div>
                   )}
+                </section>
+
+                <section className="section token-authorization">
+                  <h2>代币授权</h2>
+                  <input
+                      type="text"
+                      value={authorizationAmount}
+                      onChange={(e) => setAuthorizationAmount(e.target.value)}
+                      placeholder="授权代币数量"
+                  />
+                  <button onClick={authorizeTokens}>授权代币</button>
                 </section>
 
                 {/* 管理功能区块 */}
@@ -1715,15 +1727,6 @@ function App() {
                         />
                         <button onClick={mintHouse}>铸造房屋</button>
 
-                        {/* 授权代币 */}
-                        <h3>授权代币</h3>
-                        <input
-                            type="text"
-                            value={authorizationAmount}
-                            onChange={(e) => setAuthorizationAmount(e.target.value)}
-                            placeholder="授权代币数量"
-                        />
-                        <button onClick={authorizeTokens}>授权代币</button>
                       </div>
                   )}
 
@@ -1748,7 +1751,8 @@ function App() {
                       <button onClick={() => {
                         exchangeEtherForTokens();
                         setDialogVisible(null);
-                      }}>确定</button>
+                      }}>确定
+                      </button>
                       <button onClick={() => setDialogVisible(null)}>取消</button>
                     </div>
                 )}
@@ -1765,7 +1769,8 @@ function App() {
                       <button onClick={() => {
                         listHouseForSale(parseInt(dialogVisible.split('-')[1]), newPrice);
                         setDialogVisible(null);
-                      }}>确定</button>
+                      }}>确定
+                      </button>
                       <button onClick={() => setDialogVisible(null)}>取消</button>
                     </div>
                 )}
